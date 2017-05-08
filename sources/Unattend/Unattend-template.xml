@@ -23,7 +23,7 @@
                     </Ipv6Settings>
                     <Identifier>Ethernet</Identifier>
                     <UnicastIpAddresses>
-                        <IpAddress wcm:action="add" wcm:keyValue="1">192.168.1.1/24</IpAddress>
+                        <IpAddress wcm:action="add" wcm:keyValue="1">10.0.0.1/24</IpAddress>
                     </UnicastIpAddresses>
                     <Routes>            
                     </Routes>
@@ -35,7 +35,7 @@
             <RunSynchronous>
                 <RunSynchronousCommand wcm:action="add">
                     <Order>1</Order>
-                    <Path>%SystemDrive%\windows\system32\windowspowershell\v1.0\powershell.exe -executionpolicy unrestricted -command "%SystemDrive%\ArdyLab\ConfigLabVM.ps1"</Path>                    
+                    <Path>%SystemDrive%\windows\system32\windowspowershell\v1.0\powershell.exe -executionpolicy unrestricted -command "%SystemDrive%\ArdyLab\LabAutoRun.ps1"</Path>                    
                 </RunSynchronousCommand>
             </RunSynchronous>
         </component>

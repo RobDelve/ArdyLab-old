@@ -140,6 +140,19 @@
                     }
 
                     @{
+                        Role                 = 'Oracle Service'
+                        Description          = 'Use to launch Oracle services'
+                        UserName             = 'Oracle_service'
+                        Password             = 'Hyp3r10n'
+                        GivenName            = ''
+                        Surname              = ''
+                        DisplayName          = 'Oracle Service'
+                        PasswordNeverExpires = $true
+                        Enabled              = $true
+                        Path                 = 'OU=LabUsers'
+                        Ensure               = 'Present'
+                    }
+                    @{
                         Role                 = 'EPM LDAP'
                         Description          = 'Use to configure HSS for conections to this AD Domain'
                         UserName             = 'epm_ldap'
@@ -180,21 +193,45 @@
             )    
                 
         }
+
+        OracleServer = @{                             
+            Setup = @{
+                Path = '\\TEST-DC01\OraInstall'
+                Credential = @{
+                    Username = 'ora_service'
+                    Password = 'Hyp3r10n'
+                }
+                Instance = ''
+            }                    
+
+            Databases = @(
+                @{
+
+                }
+            )    
+                
+        }
                 
         FileServer = @{
             MountVHD = @(
                 @{
                     DriveLetter = 'S'
-                    DiskNumber  = 1
                     ShareName   = 'SQLInstall'
                     Path        = 'C:\VM\VHD Templates\SQL2012R2_Install.vhdx'
+                    DiskNumber  = 1
+                    ControllerParams = @{ControllerType = 'SCSI'
+                                         ControllerNumber = 0
+                                         ControllerLocation = 1}
                 }
 
                 @{
                     DriveLetter = 'T'
-                    DiskNumber  = 2
                     ShareName   = 'Win2012Sources'
                     Path        = 'C:\VM\VHD Templates\Win2012_Sources.vhdx'
+                    DiskNumber  = 2
+                    ControllerParams = @{ControllerType = 'SCSI'
+                                         ControllerNumber = 0
+                                         ControllerLocation = 2}
                 }
             )
         }        

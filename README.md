@@ -1,6 +1,10 @@
-**# README #
+### README ###
 
-ArdyLab - Draft Readme
+**IMPORTANT** - This branch is the code used during the Infratects TopGun 2017 Event.
+Not all features and configurations are currently included.
+These will be moved over from a seperate development respository once they have undergone further testing.
+
+**ArdyLab - Draft Readme**
 
 ### How do I get set up? ###
 

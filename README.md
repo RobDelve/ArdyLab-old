@@ -9,8 +9,8 @@ These will be moved over from a seperate development respository once they have 
 ### How do I get set up? ###
 
 * Copy the **'ArdyLab'** folder to **'C:\Program Files\WindowsPowerShell\Modules\ArdyLab'**
-* Launch PowerShell console
-* Run **Setup-ArdyLab**
+* Launch PowerShell console as an Administrator
+* Run **Initialize-ArdyLab**
 * Create New/Edit **LabConfig.psd1** in **'C:\ProgramData\ArdyLab\LabResources\ConfigurationData'**
 * Run **Initialize-ArdyLab -InstallModules**
 * Run **Set-ArdyLabVMHost -RunNow -ConfigFile *LabConfig.psd1***
@@ -21,4 +21,4 @@ These will be moved over from a seperate development respository once they have 
 
 
 
-contact: rob.delve@infratects.com
+contact: rob@ardy.co.uk
